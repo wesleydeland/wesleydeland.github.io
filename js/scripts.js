@@ -40,6 +40,10 @@
       target: '#mainNav',
       offset: 80
     });
+
+    //current year for copyright
+    document.getElementById("currentYear").innerHTML = new Date().getFullYear();
+
   
     // Collapse Navbar
     var navbarCollapse = function() {
