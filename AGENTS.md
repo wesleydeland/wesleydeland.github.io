@@ -157,9 +157,11 @@ No automated linters configured. Run manually:
 - HTML: `<!-- Comment -->`
 
 ### Git and Commit Messages
+- **Never push directly to master**: Always create a new branch or use an existing non-master branch for updates.
 - Branches: `feature/add-blog`, `fix/css-bug`
 - Commits: `Add blog section to homepage` (imperative mood)
 - PRs: Descriptive titles, link issues
+- **Always ask before git push**: Confirm with user before pushing changes to remote.
 
 ### Security
 - No secrets in code
