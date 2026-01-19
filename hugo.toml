@@ -1,0 +1,5 @@
+baseURL = 'https://wesleydeland.github.io/blog/'
+languageCode = 'en-us'
+title = 'Wesley Deland - Blog'
+theme = 'PaperMod'
+publishDir = 'blog'
