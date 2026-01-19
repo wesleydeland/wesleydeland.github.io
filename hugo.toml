@@ -6,4 +6,4 @@ publishDir = 'blog'
 
 [[menu.main]]
 name = 'Home'
-url = '/'
+url = '/index.html'
