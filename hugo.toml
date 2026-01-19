@@ -6,4 +6,4 @@ publishDir = 'blog'
 
 [[menu.main]]
 name = 'Home'
-url = '/index.html'
+url = 'https://wesleydeland.github.io/'
