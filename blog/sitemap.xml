@@ -2,13 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://wesleydeland.github.io/blog/posts/</loc>
-    <lastmod>2026-01-18T18:14:41-06:00</lastmod>
+    <loc>https://wesleydeland.github.io/blog/posts/opencode/</loc>
+    <lastmod>2026-01-18T18:49:42-06:00</lastmod>
   </url><url>
-    <loc>https://wesleydeland.github.io/blog/posts/welcome-post/</loc>
-    <lastmod>2026-01-18T18:14:41-06:00</lastmod>
+    <loc>https://wesleydeland.github.io/blog/posts/</loc>
+    <lastmod>2026-01-18T18:49:42-06:00</lastmod>
   </url><url>
     <loc>https://wesleydeland.github.io/blog/</loc>
+    <lastmod>2026-01-18T18:49:42-06:00</lastmod>
+  </url><url>
+    <loc>https://wesleydeland.github.io/blog/posts/welcome-post/</loc>
     <lastmod>2026-01-18T18:14:41-06:00</lastmod>
   </url><url>
     <loc>https://wesleydeland.github.io/blog/categories/</loc>
