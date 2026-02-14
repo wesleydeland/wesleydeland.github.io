@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" dir="auto" data-theme="auto">
+<html lang="en" dir="auto">
 
 <head><meta charset="utf-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -10,7 +10,7 @@
 <meta name="description" content="Posts - Wesley Deland - Blog">
 <meta name="author" content="">
 <link rel="canonical" href="https://wesleydeland.github.io/blog/posts/">
-<link crossorigin="anonymous" href="/blog/assets/css/stylesheet.da3211e5ef867bf2b75fd5a6515cfed7195c011e8ab735694e203810a827097b.css" integrity="sha256-2jIR5e&#43;Ge/K3X9WmUVz&#43;1xlcAR6KtzVpTiA4EKgnCXs=" rel="preload stylesheet" as="style">
+<link crossorigin="anonymous" href="/blog/assets/css/stylesheet.fc220c15db4aef0318bbf30adc45d33d4d7c88deff3238b23eb255afdc472ca6.css" integrity="sha256-/CIMFdtK7wMYu/MK3EXTPU18iN7/MjiyPrJVr9xHLKY=" rel="preload stylesheet" as="style">
 <link rel="icon" href="https://wesleydeland.github.io/blog/favicon.ico">
 <link rel="icon" type="image/png" sizes="16x16" href="https://wesleydeland.github.io/blog/favicon-16x16.png">
 <link rel="icon" type="image/png" sizes="32x32" href="https://wesleydeland.github.io/blog/favicon-32x32.png">
@@ -18,7 +18,7 @@
 <link rel="mask-icon" href="https://wesleydeland.github.io/blog/safari-pinned-tab.svg">
 <meta name="theme-color" content="#2e2e33">
 <meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" type="application/rss+xml" href="https://wesleydeland.github.io/blog/posts/index.xml" title="rss">
+<link rel="alternate" type="application/rss+xml" href="https://wesleydeland.github.io/blog/posts/index.xml">
 <link rel="alternate" hreflang="en" href="https://wesleydeland.github.io/blog/posts/">
 <noscript>
     <style>
@@ -40,45 +40,30 @@
                 --code-block-bg: rgb(46, 46, 51);
                 --code-bg: rgb(55, 56, 62);
                 --border: rgb(51, 51, 51);
-                color-scheme: dark;
             }
 
             .list {
                 background: var(--theme);
             }
 
-            .toc {
-                background: var(--entry);
+            .list:not(.dark)::-webkit-scrollbar-track {
+                background: 0 0;
             }
-        }
 
-        @media (prefers-color-scheme: light) {
-            .list::-webkit-scrollbar-thumb {
-                border-color: var(--code-bg);
+            .list:not(.dark)::-webkit-scrollbar-thumb {
+                border-color: var(--theme);
             }
         }
 
     </style>
-</noscript>
-<script>
-    if (localStorage.getItem("pref-theme") === "dark") {
-        document.querySelector("html").dataset.theme = 'dark';
-    } else if (localStorage.getItem("pref-theme") === "light") {
-       document.querySelector("html").dataset.theme = 'light';
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.querySelector("html").dataset.theme = 'dark';
-    } else {
-        document.querySelector("html").dataset.theme = 'light';
-    }
+</noscript><meta property="og:title" content="Posts" />
+<meta property="og:description" content="" />
+<meta property="og:type" content="website" />
+<meta property="og:url" content="https://wesleydeland.github.io/blog/posts/" />
 
-</script><meta property="og:url" content="https://wesleydeland.github.io/blog/posts/">
-  <meta property="og:site_name" content="Wesley Deland - Blog">
-  <meta property="og:title" content="Posts">
-  <meta property="og:locale" content="en-us">
-  <meta property="og:type" content="website">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Posts">
-<meta name="twitter:description" content="">
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Posts"/>
+<meta name="twitter:description" content=""/>
 
 
 <script type="application/ld+json">
@@ -96,13 +81,25 @@
 }
 </script>
 </head>
+
 <body class="list" id="top">
-    <header class="header">
+<script>
+    if (localStorage.getItem("pref-theme") === "dark") {
+        document.body.classList.add('dark');
+    } else if (localStorage.getItem("pref-theme") === "light") {
+        document.body.classList.remove('dark')
+    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        document.body.classList.add('dark');
+    }
+
+</script>
+
+<header class="header">
     <nav class="nav">
         <div class="logo">
             <a href="https://wesleydeland.github.io/blog/" accesskey="h" title="Wesley Deland - Blog (Alt + H)">Wesley Deland - Blog</a>
             <div class="logo-switches">
-                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
+                <button id="theme-toggle" accesskey="t" title="(Alt + T)">
                     <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
                         fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
                         stroke-linejoin="round">
@@ -148,12 +145,23 @@
 
 <article class="post-entry"> 
   <header class="entry-header">
+    <h2 class="entry-hint-parent">Windows Modern Standby
+    </h2>
+  </header>
+  <div class="entry-content">
+    <p>Why Microsoft, Why? This week I got a refurbished Windows laptop (yay sustainability!) for personal use – A Dell Precision 5560. In almost all regards, this is a very nice laptop. Fast processor, great touchscreen display, 32 GB RAM, etc. But when I close the lid… nothing happens. Fans keep spinning, bottom of the case is hot, and now I don’t trust that this thing knows how to go to sleep....</p>
+  </div>
+  <footer class="entry-footer"><span title='2026-02-14 07:56:09 -0600 CST'>February 14, 2026</span></footer>
+  <a class="entry-link" aria-label="post link to Windows Modern Standby" href="https://wesleydeland.github.io/blog/posts/windows-modern-standby/"></a>
+</article>
+
+<article class="post-entry"> 
+  <header class="entry-header">
     <h2 class="entry-hint-parent">Opencode
     </h2>
   </header>
   <div class="entry-content">
-    <p>This week, I learned about a new open source tool called opencode. With all the hype around Claude or Copilot, I am loving seeing a fully open-source agent tool. Excited to see where this goes!
-</p>
+    <p>This week, I learned about a new open source tool called opencode. With all the hype around Claude or Copilot, I am loving seeing a fully open-source agent tool. Excited to see where this goes!</p>
   </div>
   <footer class="entry-footer"><span title='2026-01-18 18:49:42 -0600 CST'>January 18, 2026</span></footer>
   <a class="entry-link" aria-label="post link to Opencode" href="https://wesleydeland.github.io/blog/posts/opencode/"></a>
@@ -166,8 +174,7 @@
   </header>
   <div class="entry-content">
     <p>Welcome to my blog! This is the first post on my new Hugo-powered blog.
-Here I’ll share thoughts on software engineering, personal projects, and more.
-</p>
+Here I’ll share thoughts on software engineering, personal projects, and more.</p>
   </div>
   <footer class="entry-footer"><span title='2026-01-18 18:14:41 -0600 CST'>January 18, 2026</span></footer>
   <a class="entry-link" aria-label="post link to Welcome Post" href="https://wesleydeland.github.io/blog/posts/welcome-post/"></a>
@@ -190,14 +197,9 @@ Here I’ll share thoughts on software engineering, personal projects, and more.
 </a>
 
 <script>
-    let menu = document.getElementById('menu');
+    let menu = document.getElementById('menu')
     if (menu) {
-        
-        const scrollPosition = localStorage.getItem("menu-scroll-position");
-        if (scrollPosition) {
-            menu.scrollLeft = parseInt(scrollPosition, 10);
-        }
-        
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
         menu.onscroll = function () {
             localStorage.setItem("menu-scroll-position", menu.scrollLeft);
         }
@@ -238,12 +240,11 @@ Here I’ll share thoughts on software engineering, personal projects, and more.
 </script>
 <script>
     document.getElementById("theme-toggle").addEventListener("click", () => {
-        const html = document.querySelector("html");
-        if (html.dataset.theme === "dark") {
-            html.dataset.theme = 'light';
+        if (document.body.className.includes("dark")) {
+            document.body.classList.remove('dark');
             localStorage.setItem("pref-theme", 'light');
         } else {
-            html.dataset.theme = 'dark';
+            document.body.classList.add('dark');
             localStorage.setItem("pref-theme", 'dark');
         }
     })
