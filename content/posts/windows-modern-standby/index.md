@@ -6,7 +6,7 @@ title = 'Windows Modern Standby'
 
 # Why Microsoft, Why?
 
-This week I got a refurbished Windows laptop for personal use -- A Dell Precision 5560. In almost all regards, this is a very nice laptop. Fast processor, great touchscreen display, 32 GB RAM, etc. But when I close the lid... nothing happens. Fans keep spinning, bottom of the case is hot, and now I don't trust that this thing knows how to go to sleep.
+This week I got a refurbished Windows laptop (yay sustainability!) for personal use -- A Dell Precision 5560. In almost all regards, this is a very nice laptop. Fast processor, great touchscreen display, 32 GB RAM, etc. But when I close the lid... nothing happens. Fans keep spinning, bottom of the case is hot, and now I don't trust that this thing knows how to go to sleep.
 
 This is the first Windows laptop I've purchased for personal use in over a decade. I use windows laptops at work, so I've been aware of some of the flakiness with Windows Sleep over the past few years, but generally, I'll just shut down and start up fresh in the morning the next day. My previous personal Windows laptop, a 2015 Dell Latitude, never exhibited this issue with sleep. Why's that? It supported S3 sleep mode or what used to be "regular" sleep.
 

@@ -4,37 +4,31 @@
     <title>Wesley Deland - Blog</title>
     <link>https://wesleydeland.github.io/blog/</link>
     <description>Recent content on Wesley Deland - Blog</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo -- 0.123.7</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 14 Feb 2026 07:56:09 -0600</lastBuildDate><atom:link href="https://wesleydeland.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 14 Feb 2026 07:56:09 -0600</lastBuildDate>
+    <atom:link href="https://wesleydeland.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Windows Modern Standby</title>
       <link>https://wesleydeland.github.io/blog/posts/windows-modern-standby/</link>
       <pubDate>Sat, 14 Feb 2026 07:56:09 -0600</pubDate>
-      
       <guid>https://wesleydeland.github.io/blog/posts/windows-modern-standby/</guid>
-      <description>Why Microsoft, Why? This week I got a refurbished Windows laptop for personal use &amp;ndash; A Dell Precision 5560. In almost all regards, this is a very nice laptop. Fast processor, great touchscreen display, 32 GB RAM, etc. But when I close the lid&amp;hellip; nothing happens. Fans keep spinning, bottom of the case is hot, and now I don&amp;rsquo;t trust that this thing knows how to go to sleep.
-This is the first Windows laptop I&amp;rsquo;ve purchased for personal use in over a decade.</description>
+      <description>Why Microsoft, Why? This week I got a refurbished Windows laptop (yay sustainability!) for personal use &amp;ndash; A Dell Precision 5560. In almost all regards, this is a very nice laptop. Fast processor, great touchscreen display, 32 GB RAM, etc. But when I close the lid&amp;hellip; nothing happens. Fans keep spinning, bottom of the case is hot, and now I don&amp;rsquo;t trust that this thing knows how to go to sleep.</description>
     </item>
-    
     <item>
       <title>Opencode</title>
       <link>https://wesleydeland.github.io/blog/posts/opencode/</link>
       <pubDate>Sun, 18 Jan 2026 18:49:42 -0600</pubDate>
-      
       <guid>https://wesleydeland.github.io/blog/posts/opencode/</guid>
       <description>This week, I learned about a new open source tool called opencode. With all the hype around Claude or Copilot, I am loving seeing a fully open-source agent tool. Excited to see where this goes!</description>
     </item>
-    
     <item>
       <title>Welcome Post</title>
       <link>https://wesleydeland.github.io/blog/posts/welcome-post/</link>
       <pubDate>Sun, 18 Jan 2026 18:14:41 -0600</pubDate>
-      
       <guid>https://wesleydeland.github.io/blog/posts/welcome-post/</guid>
       <description>Welcome to my blog! This is the first post on my new Hugo-powered blog.
 Here I&amp;rsquo;ll share thoughts on software engineering, personal projects, and more.</description>
     </item>
-    
   </channel>
 </rss>
