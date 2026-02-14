@@ -6,7 +6,7 @@ title = 'Windows Modern Standby'
 
 # Why Microsoft, Why?
 
-This week I got a refurbished Windows laptop (yay sustainability!) for personal use -- A Dell Precision 5560. In almost all regards, this is a very nice laptop. Fast processor, great touchscreen display, 32 GB RAM, etc. But when I close the lid... nothing happens. Fans keep spinning, bottom of the case is hot, and now I don't trust that this thing knows how to go to sleep.
+This week I got a refurbished Windows laptop (yay sustainability!) for personal use -- A [Dell Precision 5560](https://www.dell.com/en-us/shop/cty/pdp/spd/precision-15-5560-laptop). In almost all regards, this is a very nice laptop. Fast processor, great touchscreen display, 32 GB RAM, etc. But when I close the lid... nothing happens. Fans keep spinning, bottom of the case is hot, and now I don't trust that this thing knows how to go to sleep.
 
 This is the first Windows laptop I've purchased for personal use in over a decade. I use windows laptops at work, so I've been aware of some of the flakiness with Windows Sleep over the past few years, but generally, I'll just shut down and start up fresh in the morning the next day. My previous personal Windows laptop, a 2015 Dell Latitude, never exhibited this issue with sleep. Why's that? It supported S3 sleep mode or what used to be "regular" sleep.
 
@@ -22,10 +22,10 @@ To "fix" this, I opted to just have the lid close action trigger hibernation. Th
 
 ## The Linux Experiment
 
-Frustrated with Windows, I wanted to see if running Linux would help out any. I side-loaded CachyOS on another partition, and tried out this distro for the first time. Overall, I am impressed with CachyOS. It's support for this hardware was decent, although I didn't find the audio quality out of the built-in speakers to be great. Those realtek drivers must be doing some real magic in Windows.
+Frustrated with Windows, I wanted to see if running Linux would help out any. I side-loaded [CachyOS](https://cachyos.org/) on another partition, and tried out this distro for the first time. Overall, I am impressed with CachyOS. It's support for this hardware was decent, although I didn't find the audio quality out of the built-in speakers to be great. Those realtek drivers must be doing some real magic in Windows.
 
 Back to sleep -- unfortunately, sleep is no better on the linux side. The hardware doesn't support S3, so linux cannot sleep either. I was hoping some of the background scheduling would be a bit better, but still found the battery would be completely drained if I left it to sleep for more than 4-5 hours. Not great. Hibernation in CachyOS was also not a simple toggle. Back to Windows for my day-to-day...
 
 # Note to the Hardware Manufacturers
 
-Just because Microsoft would like everyone to go down this "Modern Standby" route, doesn't mean that the hardware has to stop supporting S3 altogether. By removing this feature, you make an otherwise good laptop difficult to use, especially for non-technical users. My M1 Macbook Pro will go to sleep without question when I close the lid. I don't even have to think about it. I know the battery will be within 1% of what it was when I closed it. That is the experience the vast majority of people expect
+Just because Microsoft would like everyone to go down this "[Modern Standby](https://learn.microsoft.com/en-us/windows-hardware/design/device-experiences/modern-standby)" route, doesn't mean that the hardware has to stop supporting S3 altogether. By removing this feature, you make an otherwise good laptop difficult to use, especially for non-technical users. My M1 Macbook Pro will go to sleep without question when I close the lid. I don't even have to think about it. I know the battery will be within 1% of what it was when I closed it. That is the experience the vast majority of people expect
