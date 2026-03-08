@@ -4,8 +4,10 @@
     <title>Categories on Wesley Deland - Blog</title>
     <link>https://wesleydeland.github.io/blog/categories/</link>
     <description>Recent content in Categories on Wesley Deland - Blog</description>
-    <generator>Hugo -- 0.123.7</generator>
+    <generator>Hugo -- 0.157.0</generator>
     <language>en-us</language>
+    <managingEditor>mail@wesleydeland.com (Wesley Deland)</managingEditor>
+    <webMaster>mail@wesleydeland.com (Wesley Deland)</webMaster>
     <atom:link href="https://wesleydeland.github.io/blog/categories/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
