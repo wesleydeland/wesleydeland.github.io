@@ -1,0 +1,38 @@
+name: Test Deployment
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: 'latest'
+          extended: true
+
+      - name: Build
+        run: hugo --minify
+
+      - name: Create deployment artifact
+        run: |
+          tar -czf deployment.tar.gz -C blog .
+
+      - name: Trigger Dokploy Deployment
+        run: |
+          curl -X POST "${{ vars.DOKPLOY_URL }}/api/projects/${{ vars.DOKPLOY_PROJECT_NAME }}/deploy" \
+            -H "Authorization: Bearer ${{ secrets.DOKPLOY_API_TOKEN }}" \
+            -H "Content-Type: application/json" \
+            -d '{
+              "branch": "${{ github.event.pull_request.head.ref }}",
+              "commit": "${{ github.sha }}",
+              "pullRequestId": ${{ github.event.pull_request.number }}
+            }'
