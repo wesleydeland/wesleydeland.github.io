@@ -4,6 +4,10 @@ title = 'Wesley Deland - Blog'
 theme = 'PaperMod'
 publishDir = 'blog'
 
+[params.author]
+  name = 'Wesley Deland'
+  email = 'mail@wesleydeland.com'
+
 [[menu.main]]
 name = 'Home'
 url = 'https://wesleydeland.github.io/'
