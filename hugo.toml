@@ -1,4 +1,4 @@
-baseURL = 'https://wesleydeland.github.io/blog/'
+baseURL = 'https://wesleydeland.com/blog/'
 languageCode = 'en-us'
 title = 'Wesley Deland - Blog'
 theme = 'PaperMod'
