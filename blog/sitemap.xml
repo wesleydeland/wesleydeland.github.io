@@ -2,23 +2,23 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:1313/blog/posts/</loc>
+    <loc>https://wesleydeland.github.io/blog/posts/</loc>
     <lastmod>2026-02-14T07:56:09-06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/</loc>
+    <loc>https://wesleydeland.github.io/blog/</loc>
     <lastmod>2026-02-14T07:56:09-06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/posts/windows-modern-standby/</loc>
+    <loc>https://wesleydeland.github.io/blog/posts/windows-modern-standby/</loc>
     <lastmod>2026-02-14T07:56:09-06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/posts/opencode/</loc>
+    <loc>https://wesleydeland.github.io/blog/posts/opencode/</loc>
     <lastmod>2026-01-18T18:49:42-06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/posts/welcome-post/</loc>
+    <loc>https://wesleydeland.github.io/blog/posts/welcome-post/</loc>
     <lastmod>2026-01-18T18:14:41-06:00</lastmod>
   </url><url>
-    <loc>http://localhost:1313/blog/categories/</loc>
+    <loc>https://wesleydeland.github.io/blog/categories/</loc>
   </url><url>
-    <loc>http://localhost:1313/blog/tags/</loc>
+    <loc>https://wesleydeland.github.io/blog/tags/</loc>
   </url>
 </urlset>
