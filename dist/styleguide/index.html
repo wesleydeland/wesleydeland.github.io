@@ -1,0 +1,111 @@
+<!DOCTYPE html><html lang="en" class="scroll-smooth"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><title>Styleguide | Wesley Deland</title><meta name="description" content="Wesley Deland's blog - thoughts on software engineering and personal projects"><link rel="canonical" href="https://wesleydeland.com/blog/styleguide/"><!-- Aktivieren der View Transitions --><meta name="astro-view-transitions-enabled" content="true"><meta name="astro-view-transitions-fallback" content="animate"><script type="module" src="/blog/_astro/ClientRouter.astro_astro_type_script_index_0_lang.j56hQv-j.js"></script><!-- Dark mode initialization script according to official Tailwind documentation --><script>
+      // Function to apply theme
+      function applyTheme() {
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark')
+        } else {
+          document.documentElement.classList.remove('dark')
+        }
+      }
+
+      // Apply on initial load
+      applyTheme();
+
+      // Re-apply after view transitions
+      document.addEventListener('astro:after-swap', applyTheme);
+    </script><!-- Open Graph / Facebook --><meta property="og:type" content="website"><meta property="og:url" content="https://wesleydeland.com/blog/styleguide/"><meta property="og:title" content="Styleguide"><meta property="og:description" content="Wesley Deland's blog - thoughts on software engineering and personal projects"><meta property="og:image" content="https://wesleydeland.com/og-image.png"><meta property="og:site_name" content="Wesley Deland"><!-- Twitter --><meta property="twitter:card" content="summary_large_image"><meta property="twitter:url" content="https://wesleydeland.com/blog/styleguide/"><meta property="twitter:title" content="Styleguide"><meta property="twitter:description" content="Wesley Deland's blog - thoughts on software engineering and personal projects"><meta property="twitter:image" content="https://wesleydeland.com/og-image.png"><!-- Strukturierte Daten für SEO --><script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"Wesley Deland","url":"https://wesleydeland.com/","description":"Wesley Deland's blog - thoughts on software engineering and personal projects"}</script><style>
+      body {
+        font-family: 'Geist Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      }
+      code, pre, kbd, samp {
+        font-family: 'Geist Mono', ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;
+      }
+    </style><link rel="stylesheet" href="/blog/_astro/BaseLayout.CG2wFXJa.css"><style>[data-astro-transition-scope="astro-izibouyj-1"] { view-transition-name: astro-izibouyj-1; }@layer astro { ::view-transition-old(astro-izibouyj-1) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }::view-transition-new(astro-izibouyj-1) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back]::view-transition-old(astro-izibouyj-1) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back]::view-transition-new(astro-izibouyj-1) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; } }[data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-izibouyj-1"],
+			[data-astro-transition-fallback="old"][data-astro-transition-scope="astro-izibouyj-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-izibouyj-1"],
+			[data-astro-transition-fallback="new"][data-astro-transition-scope="astro-izibouyj-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back][data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-izibouyj-1"],
+			[data-astro-transition=back][data-astro-transition-fallback="old"][data-astro-transition-scope="astro-izibouyj-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back][data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-izibouyj-1"],
+			[data-astro-transition=back][data-astro-transition-fallback="new"][data-astro-transition-scope="astro-izibouyj-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }</style><style>[data-astro-transition-scope="astro-2nvg6rol-2"] { view-transition-name: astro-2nvg6rol-2; }@layer astro { ::view-transition-old(astro-2nvg6rol-2) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }::view-transition-new(astro-2nvg6rol-2) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back]::view-transition-old(astro-2nvg6rol-2) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back]::view-transition-new(astro-2nvg6rol-2) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; } }[data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-2nvg6rol-2"],
+			[data-astro-transition-fallback="old"][data-astro-transition-scope="astro-2nvg6rol-2"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-2nvg6rol-2"],
+			[data-astro-transition-fallback="new"][data-astro-transition-scope="astro-2nvg6rol-2"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back][data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-2nvg6rol-2"],
+			[data-astro-transition=back][data-astro-transition-fallback="old"][data-astro-transition-scope="astro-2nvg6rol-2"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back][data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-2nvg6rol-2"],
+			[data-astro-transition=back][data-astro-transition-fallback="new"][data-astro-transition-scope="astro-2nvg6rol-2"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }</style></head> <body class="text-gray-900 bg-white dark:text-gray-300 dark:bg-black transition-colors duration-300"> <div class="bg-white dark:bg-black transition-colors duration-300"> <header class="mx-auto max-w-4xl py-8"> <div class="flex items-center justify-between"> <a href="/" class="text-2xl font-semibold" data-astro-transition-scope="astro-izibouyj-1">Wesley Deland</a> <!-- Desktop Navigation --> <div class="hidden md:flex items-center gap-6"> <nav class="flex items-center gap-6"> <a href="/" class="nav-link">Home</a> <a href="/journal" class="nav-link">Journal</a> <a href="/about" class="nav-link">About</a> </nav> <button class="theme-toggle flex items-center justify-center w-8 h-8 rounded-lg bg-gray-100 hover:bg-gray-200 dark:bg-gray-900 dark:hover:bg-gray-800 transition-colors duration-200 p-2" aria-label="Toggle dark mode" title="Toggle dark mode" data-astro-cid-jgcs5wl4> <!-- Sun Icon (Shows in Dark Mode) --> <svg class="sun w-4 h-4 text-gray-700 dark:text-gray-200" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" data-astro-cid-jgcs5wl4> <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd" data-astro-cid-jgcs5wl4></path> </svg> <!-- Moon Icon (Shows in Light Mode) --> <svg class="moon w-4 h-4 text-gray-700 dark:text-gray-200" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" data-astro-cid-jgcs5wl4> <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" data-astro-cid-jgcs5wl4></path> </svg> </button> </div> <!-- Mobile Navigation Controls --> <div class="md:hidden flex items-center gap-2"> <button class="theme-toggle flex items-center justify-center w-8 h-8 rounded-lg bg-gray-100 hover:bg-gray-200 dark:bg-gray-900 dark:hover:bg-gray-800 transition-colors duration-200 p-2" aria-label="Toggle dark mode" title="Toggle dark mode" data-astro-cid-jgcs5wl4> <!-- Sun Icon (Shows in Dark Mode) --> <svg class="sun w-4 h-4 text-gray-700 dark:text-gray-200" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" data-astro-cid-jgcs5wl4> <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd" data-astro-cid-jgcs5wl4></path> </svg> <!-- Moon Icon (Shows in Light Mode) --> <svg class="moon w-4 h-4 text-gray-700 dark:text-gray-200" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" data-astro-cid-jgcs5wl4> <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" data-astro-cid-jgcs5wl4></path> </svg> </button> <button id="mobile-menu-button" type="button" class="inline-flex items-center justify-center p-2 bg-white dark:bg-black text-gray-900 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-900 focus:outline-none border-0" aria-expanded="false" aria-label="Toggle menu"> <svg id="menu-icon" class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path> </svg> <svg id="close-icon" class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path> </svg> </button> </div> </div> <!-- Mobile Navigation --> <nav id="mobile-menu" class="hidden md:hidden mt-6 pt-4 border-t border-gray-200 dark:border-gray-800 space-y-1"> <a href="/" class="block px-3 py-2 text-sm text-gray-900 dark:text-gray-300 hover:underline">Home</a> <a href="/journal" class="block px-3 py-2 text-sm text-gray-900 dark:text-gray-300 hover:underline">Journal</a> <a href="/about" class="block px-3 py-2 text-sm text-gray-900 dark:text-gray-300 hover:underline">About</a> </nav> </header> <main class="py-10" data-astro-transition-scope="astro-2nvg6rol-2">  <div class="max-w-3xl mx-auto"> <header class="mb-12 text-center"> <h1 class="text-5xl mb-4">Styleguide</h1> <p class="text-xl text-gray-500">
+A visual reference of HTML elements
+</p> </header> <div class="prose prose-lg max-w-none"> <section id="headings"> <h2>Headings</h2> <p>All heading levels with their respective styling:</p> <h1>Heading Level 1</h1> <h2>Heading Level 2</h2> <h3>Heading Level 3</h3> <h4>Heading Level 4</h4> <h5>Heading Level 5</h5> <h6>Heading Level 6</h6> </section> <section id="text"> <h2>Text Elements</h2> <h3>Paragraph</h3> <p>This is a standard paragraph element. <strong>This text is bold</strong>. <em>This text is italicized</em>. <u>This text is underlined</u>. <del>This text is strikethrough</del>. <mark>This text is marked/highlighted</mark>. <small>This text is smaller</small>. This text contains <sub>subscript</sub> and <sup>superscript</sup> elements.</p> <h3>Links</h3> <p>This is a <a href="#">standard link</a> that you might use within a paragraph of text.</p> <h3>Blockquote</h3> <blockquote> <p>This is a blockquote. It's often used to quote someone or highlight a particular piece of text with special emphasis.</p> <p>Multiple paragraphs can be included in a blockquote.</p> <footer>— Someone Famous</footer> </blockquote> <h3>Inline Quote</h3> <p>As Shakespeare wrote, <q>To be or not to be, that is the question.</q></p> </section> <section id="address"> <h2>Address</h2> <address>
+John Doe<br>
+123 Example Street<br>
+Example City, EX 12345<br> <a href="mailto:john@example.com">john@example.com</a><br> <a href="tel:+11234567890">(123) 456-7890</a> </address> </section> <section id="breaks"> <h2>Line Break and Horizontal Rule</h2> <p>This line will be followed by a line break.<br>This text appears after the line break.</p> <hr> <p>The horizontal rule appears above this text.</p> </section> <section id="preformatted"> <h2>Preformatted Text</h2> <pre>This  text    preserves 
+  white space and line breaks
+as they     are typed.
+It uses a monospaced font.</pre> </section> <section id="lists"> <h2>Lists</h2> <h3>Unordered List</h3> <ul> <li>List item one</li> <li>List item two</li> <li>List item three with a longer description</li> <li>List item four with nested items:
+<ul> <li>Nested item one</li> <li>Nested item two</li> </ul> </li> </ul> <h3>Ordered List</h3> <ol> <li>First item</li> <li>Second item</li> <li>Third item with a longer description</li> <li>Fourth item with nested items:
+<ol> <li>Nested ordered item one</li> <li>Nested ordered item two</li> </ol> </li> </ol> <h3>Definition List</h3> <dl> <dt>Definition Term</dt> <dd>This is the definition or description for the term above.</dd> <dt>Another Definition Term</dt> <dd>Each term can have one or more definitions associated with it.</dd> <dd>Here's a second definition for the same term.</dd> <dt>HTML</dt> <dt>Hypertext Markup Language</dt> <dd>The standard markup language for documents designed to be displayed in a web browser.</dd> </dl> </section> <section id="code"> <h2>Code</h2> <h3>Inline Code</h3> <p>Use <code>console.log('Hello, World!')</code> to output a message to the browser console.</p> </section> <section id="tables"> <h2>Tables</h2> <table> <caption>Sample Table Caption</caption> <thead> <tr> <th>Header 1</th> <th>Header 2</th> <th>Header 3</th> </tr> </thead> <tbody> <tr> <td>Row 1, Cell 1</td> <td>Row 1, Cell 2</td> <td>Row 1, Cell 3</td> </tr> <tr> <td>Row 2, Cell 1</td> <td>Row 2, Cell 2</td> <td>Row 2, Cell 3</td> </tr> <tr> <td>Row 3, Cell 1</td> <td>Row 3, Cell 2</td> <td>Row 3, Cell 3</td> </tr> </tbody> <tfoot> <tr> <td colspan="3">Table Footer Information</td> </tr> </tfoot> </table> </section> <section id="forms"> <h2>Form Elements</h2> <p>Basic form elements (non-functional, just for display purposes):</p> <form> <div class="mb-4"> <label for="text-input">Text Input:</label> <input type="text" id="text-input" placeholder="Enter text here"> </div> <div class="mb-4"> <label for="textarea">Textarea:</label> <textarea id="textarea" rows="3" placeholder="Enter multiple lines of text"></textarea> </div> <div class="mb-4"> <input type="checkbox" id="checkbox"> <label for="checkbox">Checkbox example</label> </div> <div class="mb-4"> <input type="radio" id="radio1" name="radio-group" checked> <label for="radio1">Radio option 1</label> <br> <input type="radio" id="radio2" name="radio-group"> <label for="radio2">Radio option 2</label> </div> <div class="mb-4"> <label for="select">Select Dropdown:</label> <select id="select"> <option>Option 1</option> <option>Option 2</option> <option>Option 3</option> </select> </div> <button type="button">Button Element</button> <fieldset class="border p-4 rounded-md mt-4"> <legend>Fieldset with Legend</legend> <div class="mb-2"> <label for="first-name">First Name:</label> <input type="text" id="first-name" name="first-name"> </div> <div class="mb-2"> <label for="last-name">Last Name:</label> <input type="text" id="last-name" name="last-name"> </div> </fieldset> <div class="mt-4"> <label>Other Input Types:</label> <div class="mb-2"> <input type="email" placeholder="Email input"> </div> <div class="mb-2"> <input type="password" placeholder="Password input"> </div> <div class="mb-2"> <input type="number" placeholder="Number input"> </div> <div class="mb-2"> <input type="date"> </div> <div class="mb-2"> <input type="color"> </div> <div class="mb-2"> <input type="range"> </div> </div> </form> </section> <section id="progress"> <h2>Progress & Meter</h2> <h3>Progress Bar</h3> <label for="progress-demo">Download progress:</label> <progress id="progress-demo" max="100" value="75">75%</progress> <h3>Meter</h3> <label for="meter-low">Low:</label> <meter id="meter-low" min="0" max="100" value="25" low="33" high="66" optimum="50">25%</meter> <br> <label for="meter-medium">Medium:</label> <meter id="meter-medium" min="0" max="100" value="50" low="33" high="66" optimum="50">50%</meter> <br> <label for="meter-high">High:</label> <meter id="meter-high" min="0" max="100" value="80" low="33" high="66" optimum="50">80%</meter> </section> <section id="time"> <h2>Time Element</h2> <p>The concert takes place on <time datetime="2025-07-07T20:00:00">July 7th at 8:00 PM</time>.</p> <p>The store is open from <time datetime="09:00">9:00 AM</time> to <time datetime="21:00">9:00 PM</time> every day.</p> <p>The Declaration of Independence was signed on <time datetime="1776-07-04">July 4, 1776</time>.</p> </section> <section id="media"> <h2>Media Elements</h2> <h3>Image</h3> <figure> <img src="https://via.placeholder.com/800x400" alt="Placeholder Image"> <figcaption>A placeholder image with caption</figcaption> </figure> <h3>Responsive Image</h3> <img class="w-full" src="https://via.placeholder.com/1200x600" alt="Responsive Placeholder Image"> </section> <section id="misc"> <h2>Miscellaneous Elements</h2> <h3>Abbreviations</h3> <p><abbr title="HyperText Markup Language">HTML</abbr> and <abbr title="Cascading Style Sheets">CSS</abbr> are core web technologies.</p> <h3>Citations</h3> <p>According to the book <cite>HTML5 for Web Designers</cite>, semantic markup is important for accessibility.</p> <h3>Details & Summary</h3> <details> <summary>Click to expand for more information</summary> <p>This content is hidden until the user clicks on the summary element.</p> <p>It's useful for FAQ sections, accordion elements, and other expandable content.</p> </details> <h3>Ruby Annotation (East Asian Typography)</h3> <p> <ruby>
+漢 <rt>Kan</rt>
+字 <rt>ji</rt> </ruby>
+is the Japanese term for Chinese characters.
+</p> <h3>Bidirectional Text Override</h3> <p>This text includes a phrase in Hebrew: <bdo dir="rtl">שלום</bdo> (shalom) which means "peace".</p> </section> </div> </div>  </main> <footer class="max-w-4xl mx-auto py-8 border-t border-gray-200 dark:border-gray-800 mt-12"> <div class="flex flex-col md:flex-row justify-between items-center gap-4"> <div class="text-sm text-gray-500 dark:text-gray-500">
+&copy; 2026 Wesley Deland
+</div> <nav class="flex items-center gap-4"> <a href="/" class="nav-link-footer">Home</a> <a href="/journal" class="nav-link-footer">Journal</a> <a href="/about" class="nav-link-footer">About</a> </nav> </div> </footer> </div> <script type="module">function s(){const t=document.getElementById("mobile-menu-button"),e=document.getElementById("mobile-menu"),n=document.getElementById("menu-icon"),d=document.getElementById("close-icon");if(!t||!e||!n||!d)return;t.addEventListener("click",()=>{const o=t.getAttribute("aria-expanded")==="true";e.classList.toggle("hidden"),n.classList.toggle("hidden"),d.classList.toggle("hidden"),t.setAttribute("aria-expanded",String(!o))}),e.querySelectorAll("a").forEach(o=>{o.addEventListener("click",()=>{e.classList.add("hidden"),n.classList.remove("hidden"),d.classList.add("hidden"),t.setAttribute("aria-expanded","false")})})}function c(){document.querySelectorAll(".theme-toggle").forEach(e=>{const n=e.themeToggleHandler;n&&e.removeEventListener("click",n);const d=function(){document.documentElement.classList.contains("dark")?(localStorage.theme="light",document.documentElement.classList.remove("dark")):(localStorage.theme="dark",document.documentElement.classList.add("dark"))};e.themeToggleHandler=d,e.addEventListener("click",d)})}s();c();document.addEventListener("astro:after-swap",()=>{s(),c()});</script> </body> </html>
