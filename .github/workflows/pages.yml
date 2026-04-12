@@ -1,8 +1,8 @@
-name: Build and deploy Astro site to GitHub Pages
+name: Deploy site to GitHub Pages
 
 on:
   push:
-    branches: [ main ]
+    branches: [master]
   workflow_dispatch:
 
 permissions:
@@ -10,42 +10,58 @@ permissions:
   pages: write
   id-token: write
 
+concurrency:
+  group: pages
+  cancel-in-progress: true
+
 jobs:
-  build-deploy:
+  build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout
+      - name: Checkout repository
         uses: actions/checkout@v4
 
-      - name: Setup Node.js
+      - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 24
+          cache: npm
 
       - name: Install dependencies
         run: npm ci
 
-      - name: Build site
+      - name: Build Astro blog
         run: npm run build
 
-      - name: Create .nojekyll to bypass Jekyll
+      - name: Assemble publish directory
         run: |
-          mkdir -p ./blog
-          touch ./blog/.nojekyll
+          rm -rf _site
+          mkdir -p _site
 
-      - name: Upload artifact for GitHub Pages
-        uses: actions/upload-pages-artifact@v1
+          # Copy the root static site
+          cp -R site-root/. _site/
+
+          # Copy the built Astro blog to /blog
+          rm -rf _site/blog
+          cp -R blog _site/blog
+
+      - name: Configure GitHub Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload Pages artifact
+        uses: actions/upload-pages-artifact@v4
         with:
-          path: ./blog
+          path: ./_site
 
   deploy:
-    needs: build-deploy
+    needs: build
     runs-on: ubuntu-latest
-    permissions:
-      pages: write
-      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
       - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v1
+        id: deployment
+        uses: actions/deploy-pages@v4
