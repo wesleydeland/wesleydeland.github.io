@@ -29,6 +29,11 @@ jobs:
       - name: Build site
         run: npm run build
 
+      - name: Create .nojekyll to bypass Jekyll
+        run: |
+          mkdir -p ./blog
+          touch ./blog/.nojekyll
+
       - name: Upload artifact for GitHub Pages
         uses: actions/upload-pages-artifact@v1
         with:
