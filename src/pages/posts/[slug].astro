@@ -1,0 +1,42 @@
+---
+import { getCollection, getEntry } from 'astro:content';
+import PostLayout from '../../layouts/PostLayout.astro';
+
+export async function getStaticPaths() {
+  const allPosts = await getCollection('posts');
+  const sortedPosts = allPosts.sort((a, b) =>
+    new Date(b.data.date).valueOf() - new Date(a.data.date).valueOf()
+  );
+
+  return sortedPosts.map((entry) => ({ params: { slug: entry.id } }));
+}
+
+// Resolve the entry using getEntryBySlug to ensure entry.render() is available
+const slug = Astro.params.slug;
+const entry = await getEntry('posts', slug);
+
+// Build navigation context from the collection
+const allPosts = await getCollection('posts');
+const sortedPosts = allPosts.sort((a, b) =>
+  new Date(b.data.date).valueOf() - new Date(a.data.date).valueOf()
+);
+const index = sortedPosts.findIndex((e) => e.id === slug);
+
+const prevPost = index > 0
+  ? { url: `/blog/posts/${sortedPosts[index - 1].id}`, title: sortedPosts[index - 1].data.title }
+  : null;
+
+const nextPost = index < sortedPosts.length - 1
+  ? { url: `/blog/posts/${sortedPosts[index + 1].id}`, title: sortedPosts[index + 1].data.title }
+  : null;
+
+let Content = null;
+if (entry && typeof entry.render === 'function') {
+  const rendered = await entry.render();
+  Content = rendered.Content;
+}
+---
+
+<PostLayout frontmatter={entry.data} prevPost={prevPost} nextPost={nextPost}>
+  {Content ? <Content /> : <div set:html={entry.rendered?.html} class="prose prose-xl max-w-3xl mx-auto" />}
+</PostLayout>

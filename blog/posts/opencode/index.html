@@ -1,288 +1,136 @@
-<!DOCTYPE html>
-<html lang="en" dir="auto" data-theme="auto">
-
-<head><meta charset="utf-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-<meta name="robots" content="index, follow">
-<title>Opencode | Wesley Deland - Blog</title>
-<meta name="keywords" content="">
-<meta name="description" content="This week, I learned about a new open source tool called opencode. With all the hype around Claude or Copilot, I am loving seeing a fully open-source agent tool. Excited to see where this goes!
-">
-<meta name="author" content="Wesley Deland">
-<link rel="canonical" href="https://wesleydeland.com/blog/posts/opencode/">
-<link crossorigin="anonymous" href="/blog/assets/css/stylesheet.199042e659bc7245f5609d333d6c044eb554a0640849bb874e1dff8eb0f57209.css" integrity="sha256-GZBC5lm8ckX1YJ0zPWwETrVUoGQISbuHTh3/jrD1cgk=" rel="preload stylesheet" as="style">
-<link rel="icon" href="https://wesleydeland.com/blog/favicon.ico">
-<link rel="icon" type="image/png" sizes="16x16" href="https://wesleydeland.com/blog/favicon-16x16.png">
-<link rel="icon" type="image/png" sizes="32x32" href="https://wesleydeland.com/blog/favicon-32x32.png">
-<link rel="apple-touch-icon" href="https://wesleydeland.com/blog/apple-touch-icon.png">
-<link rel="mask-icon" href="https://wesleydeland.com/blog/safari-pinned-tab.svg">
-<meta name="theme-color" content="#2e2e33">
-<meta name="msapplication-TileColor" content="#2e2e33">
-<link rel="alternate" hreflang="en" href="https://wesleydeland.com/blog/posts/opencode/">
-<noscript>
-    <style>
-        #theme-toggle,
-        .top-link {
-            display: none;
-        }
-
-    </style>
-    <style>
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --theme: rgb(29, 30, 32);
-                --entry: rgb(46, 46, 51);
-                --primary: rgb(218, 218, 219);
-                --secondary: rgb(155, 156, 157);
-                --tertiary: rgb(65, 66, 68);
-                --content: rgb(196, 196, 197);
-                --code-block-bg: rgb(46, 46, 51);
-                --code-bg: rgb(55, 56, 62);
-                --border: rgb(51, 51, 51);
-                color-scheme: dark;
-            }
-
-            .list {
-                background: var(--theme);
-            }
-
-            .toc {
-                background: var(--entry);
-            }
-        }
-
-        @media (prefers-color-scheme: light) {
-            .list::-webkit-scrollbar-thumb {
-                border-color: var(--code-bg);
-            }
-        }
-
-    </style>
-</noscript>
-<script>
-    if (localStorage.getItem("pref-theme") === "dark") {
-        document.querySelector("html").dataset.theme = 'dark';
-    } else if (localStorage.getItem("pref-theme") === "light") {
-       document.querySelector("html").dataset.theme = 'light';
-    } else if (window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        document.querySelector("html").dataset.theme = 'dark';
-    } else {
-        document.querySelector("html").dataset.theme = 'light';
-    }
-
-</script><meta property="og:url" content="https://wesleydeland.com/blog/posts/opencode/">
-  <meta property="og:site_name" content="Wesley Deland - Blog">
-  <meta property="og:title" content="Opencode">
-  <meta property="og:description" content="This week, I learned about a new open source tool called opencode. With all the hype around Claude or Copilot, I am loving seeing a fully open-source agent tool. Excited to see where this goes!">
-  <meta property="og:locale" content="en-us">
-  <meta property="og:type" content="article">
-    <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2026-01-18T18:49:42-06:00">
-    <meta property="article:modified_time" content="2026-01-18T18:49:42-06:00">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Opencode">
-<meta name="twitter:description" content="This week, I learned about a new open source tool called opencode. With all the hype around Claude or Copilot, I am loving seeing a fully open-source agent tool. Excited to see where this goes!
-">
-
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BreadcrumbList",
-  "itemListElement": [
-    {
-      "@type": "ListItem",
-      "position":  1 ,
-      "name": "Posts",
-      "item": "https://wesleydeland.com/blog/posts/"
-    }, 
-    {
-      "@type": "ListItem",
-      "position":  2 ,
-      "name": "Opencode",
-      "item": "https://wesleydeland.com/blog/posts/opencode/"
-    }
-  ]
-}
-</script>
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "BlogPosting",
-  "headline": "Opencode",
-  "name": "Opencode",
-  "description": "This week, I learned about a new open source tool called opencode. With all the hype around Claude or Copilot, I am loving seeing a fully open-source agent tool. Excited to see where this goes!\n",
-  "keywords": [
-    
-  ],
-  "articleBody": "This week, I learned about a new open source tool called opencode. With all the hype around Claude or Copilot, I am loving seeing a fully open-source agent tool. Excited to see where this goes!\n",
-  "wordCount" : "35",
-  "inLanguage": "en",
-  "datePublished": "2026-01-18T18:49:42-06:00",
-  "dateModified": "2026-01-18T18:49:42-06:00",
-  "author":{
-    "@type": "Person",
-    "name": {"email":"mail@wesleydeland.com","name":"Wesley Deland"}
-  },
-  "mainEntityOfPage": {
-    "@type": "WebPage",
-    "@id": "https://wesleydeland.com/blog/posts/opencode/"
-  },
-  "publisher": {
-    "@type": "Organization",
-    "name": "Wesley Deland - Blog",
-    "logo": {
-      "@type": "ImageObject",
-      "url": "https://wesleydeland.com/blog/favicon.ico"
-    }
-  }
-}
-</script>
-</head>
-<body id="top">
-    <header class="header">
-    <nav class="nav">
-        <div class="logo">
-            <a href="https://wesleydeland.com/blog/" accesskey="h" title="Wesley Deland - Blog (Alt + H)">Wesley Deland - Blog</a>
-            <div class="logo-switches">
-                <button id="theme-toggle" accesskey="t" title="(Alt + T)" aria-label="Toggle theme">
-                    <svg id="moon" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
-                    </svg>
-                    <svg id="sun" xmlns="http://www.w3.org/2000/svg" width="24" height="18" viewBox="0 0 24 24"
-                        fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                        stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="5"></circle>
-                        <line x1="12" y1="1" x2="12" y2="3"></line>
-                        <line x1="12" y1="21" x2="12" y2="23"></line>
-                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-                        <line x1="1" y1="12" x2="3" y2="12"></line>
-                        <line x1="21" y1="12" x2="23" y2="12"></line>
-                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-                    </svg>
-                </button>
-            </div>
-        </div>
-        <ul id="menu">
-            <li>
-                <a href="https://wesleydeland.github.io/" title="Home">
-                    <span>Home</span>&nbsp;
-                    <svg fill="none" shape-rendering="geometricPrecision" stroke="currentColor" stroke-linecap="round"
-                        stroke-linejoin="round" stroke-width="2.5" viewBox="0 0 24 24" height="12" width="12">
-                        <path d="M18 13v6a2 2 0 01-2 2H5a2 2 0 01-2-2V8a2 2 0 012-2h6"></path>
-                        <path d="M15 3h6v6"></path>
-                        <path d="M10 14L21 3"></path>
-                    </svg>
-                </a>
-            </li>
-        </ul>
-    </nav>
-</header>
-<main class="main">
-
-<article class="post-single">
-  <header class="post-header">
-    
-    <h1 class="post-title entry-hint-parent">
-      Opencode
-    </h1>
-    <div class="post-meta"><span title='2026-01-18 18:49:42 -0600 CST'>January 18, 2026</span>&nbsp;·&nbsp;<span>Wesley Deland</span>
-
-</div>
-  </header> 
-  <div class="post-content"><p>This week, I learned about a new open source tool called <a href="https://opencode.ai/">opencode</a>. With all the hype around Claude or Copilot, I am loving seeing a fully open-source agent tool. Excited to see where this goes!</p>
-<p><img alt="OpenCode Screenshot" loading="lazy" src="/blog/posts/opencode/image.png"></p>
-
-
-  </div>
-
-  <footer class="post-footer">
-    <ul class="post-tags">
-    </ul>
-  </footer>
-</article>
-    </main>
-    
-<footer class="footer">
-        <span>&copy; 2026 <a href="https://wesleydeland.com/blog/">Wesley Deland - Blog</a></span> · 
-
-    <span>
-        Powered by
-        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
-        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
-    </span>
-</footer>
-<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
-    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
-        <path d="M12 6H0l6-6z" />
-    </svg>
-</a>
-
-<script>
-    let menu = document.getElementById('menu');
-    if (menu) {
-        
-        const scrollPosition = localStorage.getItem("menu-scroll-position");
-        if (scrollPosition) {
-            menu.scrollLeft = parseInt(scrollPosition, 10);
-        }
-        
-        menu.onscroll = function () {
-            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
-        }
-    }
-
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-        anchor.addEventListener("click", function (e) {
-            e.preventDefault();
-            var id = this.getAttribute("href").substr(1);
-            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
-                    behavior: "smooth"
-                });
-            } else {
-                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
-            }
-            if (id === "top") {
-                history.replaceState(null, null, " ");
-            } else {
-                history.pushState(null, null, `#${id}`);
-            }
-        });
-    });
-
-</script>
-<script>
-    var mybutton = document.getElementById("top-link");
-    window.onscroll = function () {
-        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
-            mybutton.style.visibility = "visible";
-            mybutton.style.opacity = "1";
+<!DOCTYPE html><html lang="en" class="scroll-smooth"> <head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><link rel="icon" type="image/svg+xml" href="/favicon.svg"><title>Opencode | Wesley Deland</title><meta name="description" content="Trying out opencode.ai"><link rel="canonical" href="https://wesleydeland.com/blog/posts/opencode/"><!-- View Transitions enabled in Astro 5+ --><!-- <ClientRouter /> --><!-- Dark mode initialization script --><script>
+      // Function to apply theme
+      function applyTheme() {
+        if (localStorage.theme === 'dark' || (!('theme' in localStorage) && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+          document.documentElement.classList.add('dark')
         } else {
-            mybutton.style.visibility = "hidden";
-            mybutton.style.opacity = "0";
+          document.documentElement.classList.remove('dark')
         }
-    };
+      }
 
-</script>
-<script>
-    document.getElementById("theme-toggle").addEventListener("click", () => {
-        const html = document.querySelector("html");
-        if (html.dataset.theme === "dark") {
-            html.dataset.theme = 'light';
-            localStorage.setItem("pref-theme", 'light');
-        } else {
-            html.dataset.theme = 'dark';
-            localStorage.setItem("pref-theme", 'dark');
-        }
-    })
+      // Apply on initial load
+      applyTheme();
 
-</script>
-</body>
-
-</html>
+      // Re-apply after view transitions
+      document.addEventListener('astro:after-swap', applyTheme);
+    </script><!-- Open Graph / Facebook --><meta property="og:type" content="article"><meta property="og:url" content="https://wesleydeland.com/blog/posts/opencode/"><meta property="og:title" content="Opencode"><meta property="og:description" content="Trying out opencode.ai"><meta property="og:image" content="https://wesleydeland.com/og-image.png"><meta property="og:site_name" content="Wesley Deland"><meta property="article:published_time" content="2026-01-18T00:00:00.000Z"><!-- Twitter --><meta property="twitter:card" content="summary_large_image"><meta property="twitter:url" content="https://wesleydeland.com/blog/posts/opencode/"><meta property="twitter:title" content="Opencode"><meta property="twitter:description" content="Trying out opencode.ai"><meta property="twitter:image" content="https://wesleydeland.com/og-image.png"><!-- Strukturierte Daten für SEO --><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"Opencode","image":"https://wesleydeland.com/og-image.png","author":{"@type":"Person","name":"Wesley Deland"},"publisher":{"@type":"Organization","name":"Wesley Deland","logo":{"@type":"ImageObject","url":"https://wesleydeland.com/favicon.svg"}},"datePublished":"2026-01-18T00:00:00.000Z","dateModified":"2026-01-18T00:00:00.000Z","mainEntityOfPage":"https://wesleydeland.com/blog/posts/opencode/"}</script><style>
+      body {
+        font-family: 'Geist Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+      }
+      code, pre, kbd, samp {
+        font-family: 'Geist Mono', ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'Liberation Mono', monospace;
+      }
+    </style><link rel="stylesheet" href="/blog/_astro/_slug_.DjOEFU4m.css">
+<style>@keyframes astroFadeInOut{0%{opacity:1}to{opacity:0}}@keyframes astroFadeIn{0%{opacity:0;mix-blend-mode:plus-lighter}to{opacity:1;mix-blend-mode:plus-lighter}}@keyframes astroFadeOut{0%{opacity:1;mix-blend-mode:plus-lighter}to{opacity:0;mix-blend-mode:plus-lighter}}@keyframes astroSlideFromRight{0%{transform:translate(100%)}}@keyframes astroSlideFromLeft{0%{transform:translate(-100%)}}@keyframes astroSlideToRight{to{transform:translate(100%)}}@keyframes astroSlideToLeft{to{transform:translate(-100%)}}@media(prefers-reduced-motion){::view-transition-group(*),::view-transition-old(*),::view-transition-new(*){animation:none!important}[data-astro-transition-scope]{animation:none!important}}
+</style><style>[data-astro-transition-scope="astro-f64ip3ln-1"] { view-transition-name: title-opencode; }@layer astro { ::view-transition-old(title-opencode) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }::view-transition-new(title-opencode) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back]::view-transition-old(title-opencode) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back]::view-transition-new(title-opencode) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; } }[data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-f64ip3ln-1"],
+			[data-astro-transition-fallback="old"][data-astro-transition-scope="astro-f64ip3ln-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-f64ip3ln-1"],
+			[data-astro-transition-fallback="new"][data-astro-transition-scope="astro-f64ip3ln-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back][data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-f64ip3ln-1"],
+			[data-astro-transition=back][data-astro-transition-fallback="old"][data-astro-transition-scope="astro-f64ip3ln-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back][data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-f64ip3ln-1"],
+			[data-astro-transition=back][data-astro-transition-fallback="new"][data-astro-transition-scope="astro-f64ip3ln-1"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }</style><style>[data-astro-transition-scope="astro-izibouyj-2"] { view-transition-name: astro-izibouyj-2; }@layer astro { ::view-transition-old(astro-izibouyj-2) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }::view-transition-new(astro-izibouyj-2) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back]::view-transition-old(astro-izibouyj-2) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back]::view-transition-new(astro-izibouyj-2) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; } }[data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-izibouyj-2"],
+			[data-astro-transition-fallback="old"][data-astro-transition-scope="astro-izibouyj-2"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-izibouyj-2"],
+			[data-astro-transition-fallback="new"][data-astro-transition-scope="astro-izibouyj-2"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back][data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-izibouyj-2"],
+			[data-astro-transition=back][data-astro-transition-fallback="old"][data-astro-transition-scope="astro-izibouyj-2"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back][data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-izibouyj-2"],
+			[data-astro-transition=back][data-astro-transition-fallback="new"][data-astro-transition-scope="astro-izibouyj-2"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }</style><style>[data-astro-transition-scope="astro-2nvg6rol-3"] { view-transition-name: astro-2nvg6rol-3; }@layer astro { ::view-transition-old(astro-2nvg6rol-3) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }::view-transition-new(astro-2nvg6rol-3) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back]::view-transition-old(astro-2nvg6rol-3) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back]::view-transition-new(astro-2nvg6rol-3) { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; } }[data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-2nvg6rol-3"],
+			[data-astro-transition-fallback="old"][data-astro-transition-scope="astro-2nvg6rol-3"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-2nvg6rol-3"],
+			[data-astro-transition-fallback="new"][data-astro-transition-scope="astro-2nvg6rol-3"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }[data-astro-transition=back][data-astro-transition-fallback="old"] [data-astro-transition-scope="astro-2nvg6rol-3"],
+			[data-astro-transition=back][data-astro-transition-fallback="old"][data-astro-transition-scope="astro-2nvg6rol-3"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeOut; }[data-astro-transition=back][data-astro-transition-fallback="new"] [data-astro-transition-scope="astro-2nvg6rol-3"],
+			[data-astro-transition=back][data-astro-transition-fallback="new"][data-astro-transition-scope="astro-2nvg6rol-3"] { 
+	animation-duration: 180ms;
+	animation-timing-function: cubic-bezier(0.76, 0, 0.24, 1);
+	animation-fill-mode: both;
+	animation-name: astroFadeIn; }</style></head> <body class="bg-white text-gray-900 dark:bg-gray-900 dark:text-gray-100 transition-colors duration-300"> <div class="bg-white dark:bg-gray-900 transition-colors duration-300"> <header class="mx-auto max-w-4xl py-8"> <div class="flex items-center justify-between"> <a href="/" class="text-2xl font-semibold" data-astro-transition-scope="astro-izibouyj-2">Wesley Deland</a> <!-- Desktop Navigation --> <div class="hidden md:flex items-center gap-6"> <nav class="flex items-center gap-6"> <a href="/" class="nav-link">Home</a> <a href="/blog/journal" class="nav-link">Journal</a> <a href="/blog/about" class="nav-link">About</a> </nav> <button class="theme-toggle flex items-center justify-center w-8 h-8 rounded-lg bg-gray-100 hover:bg-gray-200 dark:bg-gray-900 dark:hover:bg-gray-800 transition-colors duration-200 p-2" aria-label="Toggle dark mode" title="Toggle dark mode" data-astro-cid-jgcs5wl4> <!-- Sun Icon (Shows in Dark Mode) --> <svg class="sun w-4 h-4 text-gray-700 dark:text-gray-200" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" data-astro-cid-jgcs5wl4> <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd" data-astro-cid-jgcs5wl4></path> </svg> <!-- Moon Icon (Shows in Light Mode) --> <svg class="moon w-4 h-4 text-gray-700 dark:text-gray-200" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" data-astro-cid-jgcs5wl4> <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" data-astro-cid-jgcs5wl4></path> </svg> </button>  </div> <!-- Mobile Navigation Controls --> <div class="md:hidden flex items-center gap-2"> <button class="theme-toggle flex items-center justify-center w-8 h-8 rounded-lg bg-gray-100 hover:bg-gray-200 dark:bg-gray-900 dark:hover:bg-gray-800 transition-colors duration-200 p-2" aria-label="Toggle dark mode" title="Toggle dark mode" data-astro-cid-jgcs5wl4> <!-- Sun Icon (Shows in Dark Mode) --> <svg class="sun w-4 h-4 text-gray-700 dark:text-gray-200" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" data-astro-cid-jgcs5wl4> <path fill-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" clip-rule="evenodd" data-astro-cid-jgcs5wl4></path> </svg> <!-- Moon Icon (Shows in Light Mode) --> <svg class="moon w-4 h-4 text-gray-700 dark:text-gray-200" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg" data-astro-cid-jgcs5wl4> <path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z" data-astro-cid-jgcs5wl4></path> </svg> </button>  <button id="mobile-menu-button" type="button" class="inline-flex items-center justify-center p-2 bg-white dark:bg-black text-gray-900 dark:text-gray-300 hover:bg-gray-50 dark:hover:bg-gray-900 focus:outline-none border-0" aria-expanded="false" aria-label="Toggle menu"> <svg id="menu-icon" class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5"></path> </svg> <svg id="close-icon" class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path> </svg> </button> </div> </div> <!-- Mobile Navigation --> <nav id="mobile-menu" class="hidden md:hidden mt-6 pt-4 border-t border-gray-200 dark:border-gray-800 space-y-1"> <a href="/" class="block px-3 py-2 text-sm text-gray-900 dark:text-gray-300 hover:underline">Home</a> <a href="/blog/journal" class="block px-3 py-2 text-sm text-gray-900 dark:text-gray-300 hover:underline">Journal</a> <a href="/blog/about" class="block px-3 py-2 text-sm text-gray-900 dark:text-gray-300 hover:underline">About</a> </nav> </header> <main class="py-10" data-astro-transition-scope="astro-2nvg6rol-3">  <article id="main-content"> <header class="max-w-3xl mx-auto mb-10"> <div class="text-gray-500 text-sm mb-2"> <time datetime="2026-01-18T00:00:00.000Z">January 17, 2026</time> • <span aria-label="1 minute read">1 min read</span> </div> <h1 class="text-5xl mb-6" data-astro-transition-scope="astro-f64ip3ln-1">Opencode</h1> <p class="text-xl text-gray-500">Trying out opencode.ai</p>  </header>  <div class="max-w-3xl mx-auto prose prose-xl dark:prose-invert"> <div class="prose prose-xl max-w-3xl mx-auto"><p>This week, I learned about a new open source tool called <a href="https://opencode.ai/">opencode</a>. With all the hype around Claude or Copilot, I am loving seeing a fully open-source agent tool. Excited to see where this goes!</p>
+<p><img src="/blog/_astro/opencode-screenshot.DY5Cnvi-.png" alt="OpenCode Screenshot" loading="lazy"></p></div> </div> <div class="max-w-3xl mx-auto"> <nav class="mt-12 pt-8 border-t border-gray-200"> <div class="flex flex-col sm:flex-row justify-between gap-4"> <a href="/blog/posts/windows-modern-standby" class="post-nav-link items-start"> <span class="post-nav-direction">Previous Post</span> <span class="post-nav-title"> <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 mr-4 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path> </svg> Windows Modern Standby </span> </a> <a href="/blog/posts/welcome-post" class="post-nav-link items-end text-right"> <span class="post-nav-direction">Next Post</span> <span class="post-nav-title"> Welcome Post <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-4 text-gray-500" fill="none" viewBox="0 0 24 24" stroke="currentColor"> <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path> </svg> </span> </a> </div> </nav> <!-- Removed custom styles in favor of Tailwind utilities --> </div> </article>  </main> <footer class="max-w-4xl mx-auto py-8 border-t border-gray-200 dark:border-gray-800 mt-12"> <div class="flex flex-col md:flex-row justify-between items-center gap-4"> <div class="text-sm text-gray-500 dark:text-gray-500">
+&copy; 2026 Wesley Deland
+</div> <nav class="flex items-center gap-4"> <a href="/" class="nav-link-footer">Home</a> <a href="/blog/journal" class="nav-link-footer">Journal</a> <a href="/blog/about" class="nav-link-footer">About</a> </nav> </div> </footer> </div> <script type="module">function d(){const e=document.getElementById("mobile-menu-button"),t=document.getElementById("mobile-menu"),n=document.getElementById("menu-icon"),o=document.getElementById("close-icon");if(!e||!t||!n||!o)return;e.addEventListener("click",()=>{const s=e.getAttribute("aria-expanded")==="true";t.classList.toggle("hidden"),n.classList.toggle("hidden"),o.classList.toggle("hidden"),e.setAttribute("aria-expanded",String(!s))}),t.querySelectorAll("a").forEach(s=>{s.addEventListener("click",()=>{t.classList.add("hidden"),n.classList.remove("hidden"),o.classList.add("hidden"),e.setAttribute("aria-expanded","false")})})}function i(){document.querySelectorAll(".theme-toggle").forEach(t=>{t.addEventListener("click",()=>{document.documentElement.classList.contains("dark")?(localStorage.theme="light",document.documentElement.classList.remove("dark")):(localStorage.theme="dark",document.documentElement.classList.add("dark"))})})}d();i();document.addEventListener("astro:after-swap",()=>{d(),i()});</script> </body> </html>

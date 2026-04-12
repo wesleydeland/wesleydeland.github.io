@@ -1,10 +1,10 @@
 # Blog Post Workflow
 
-This document outlines the workflow for adding new blog posts to the Hugo-powered blog at `/blog/` on the personal website.
+This document outlines the workflow for adding new blog posts to the Astro-powered blog at `/blog/` on the personal website.
 
 ## Prerequisites
-- Hugo installed locally (`hugo version` to verify).
-- Repository cloned and on a non-master branch (e.g., `blog-setup` or a new feature branch).
+- Node.js installed locally (`node --version` to verify).
+- Repository cloned and on a non-master branch (e.g., `blog-new-post` or a new feature branch).
 - Basic Markdown knowledge for writing posts.
 
 ## Step-by-Step Workflow
@@ -14,26 +14,35 @@ This document outlines the workflow for adding new blog posts to the Hugo-powere
 - This follows the AGENTS.md policy to never push directly to master.
 
 ### 2. Create the New Post
-- Run `hugo new content posts/your-post-title.md`.
-- This generates a new Markdown file in `content/posts/` with front matter (title, date, draft status).
+- Create a new Markdown file in `src/content/posts/` named `your-post-title.md`.
+- Use front matter template:
 
-### 3. Edit the Post
-- Open `content/posts/your-post-title.md` in your editor.
-- Update the front matter (e.g., set `draft = false` for publishing).
-- Write the post content in Markdown below the front matter.
-- Save the file.
+```yaml
+---
+date: YYYY-MM-DD
+draft: false
+title: Your Post Title
+description: A brief description for SEO
+---
 
-### 4. Test Locally (Optional but Recommended)
-- Run `hugo server --buildDrafts` to preview the site locally at `http://localhost:1313/blog/`.
-- Check the new post at `/blog/posts/your-post-title/`.
+Your content here...
+```
+
+### 3. Add Images (Optional)
+- Place images in the same folder as your post: `src/content/posts/your-post-title.md`
+- Reference with relative path: `![Alt text](./image.png)`
+
+### 4. Test Locally (Recommended)
+- Run `npm run dev` to preview the site locally at `http://localhost:4321/blog/`.
+- Check the new post at `/blog/your-post-title/`.
 - Ensure links, images, and formatting work.
 
 ### 5. Build the Updated Blog
-- Run `hugo` to regenerate the site.
+- Run `npm run build` to generate the static site.
 - This updates the `blog/` directory with the new post and any changes.
 
 ### 6. Commit the Changes
-- Run `git add blog/ content/posts/your-post-title.md` (add only the built blog and source post).
+- Run `git add blog/ src/content/posts/your-post-title.md` (add built blog and source post).
 - Run `git commit -m "Add new blog post: Your Post Title"`.
 - Follow AGENTS.md commit style (imperative mood, e.g., "Add new post about X").
 
@@ -46,17 +55,26 @@ This document outlines the workflow for adding new blog posts to the Hugo-powere
 - Merge the PR on GitHub.
 - GitHub Pages (set to `master` branch) will automatically serve the updated `/blog/` with the new post.
 
-## Automation Options (Future Enhancement)
-- **GitHub Actions Workflow**: Add a workflow to auto-build on push to `master`, but this requires committing built files or setting up deployment.
-- **Draft Management**: Keep posts as `draft = true` until ready, then set to `false` and rebuild.
-- **Scheduling**: Use front matter `publishDate` for future publishing.
+## Astro Commands
+- `npm run dev` - Start dev server with hot reload
+- `npm run build` - Build for production
+- `npm run preview` - Preview production build locally
+
+## Front Matter Fields
+| Field | Required | Description |
+|-------|----------|-------------|
+| date | Yes | Publication date (YYYY-MM-DD) |
+| title | Yes | Post title |
+| description | No | SEO description |
+| draft | No | Set `false` to publish |
 
 ## Potential Issues and Mitigations
-- **Build Errors**: If `hugo` fails, check config (`hugo.toml`) and post front matter.
-- **Stale Content**: Always rebuild after edits to update `blog/`.
-- **Version Control**: Don't commit `public/` or temp files; only `blog/`, `content/`, and config.
-- **Performance**: For many posts, consider pagination or archives.
+- **Build Errors**: Check Astro config and post front matter.
+- **Missing Images**: Ensure images are in same folder as post.
+- **Styles**: Tailwind classes available for custom styling.
 
 ## Notes
+- Keep posts as `draft: true` until ready to publish.
+- Use relative image paths: `./image.png` not absolute paths.
 - Update this document as the workflow evolves.
 - Refer to AGENTS.md for general code style and git policies.

@@ -1,0 +1,55 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="About">
+  <div class="max-w-3xl mx-auto">
+    <header class="mb-12 text-center" transition:animate="fade">
+      <h1 class="text-5xl mb-4">About Me</h1>
+      <p class="text-xl text-muted-foreground">
+        A little bit about who I am
+      </p>
+    </header>
+    
+    <div class="prose prose-lg dark:prose-invert max-w-none" transition:animate="fade">
+      <p>
+        Hi, I'm Wesley Deland. I'm a software engineer based in Texas. I build things with code - sometimes for work, sometimes for fun.
+      </p>
+      
+      <h2>What I Do</h2>
+      
+      <ul>
+        <li>Full-stack development</li>
+        <li>Cloud infrastructure</li>
+        <li>Automation and tooling</li>
+        <li>Breaking things and fixing them</li>
+      </ul>
+      
+      <h2>Tech I Use</h2>
+      
+      <p>
+        I work with a variety of tools and technologies including 
+        <a href="https://learn.microsoft.com/en-us/dotnet/csharp/" target="_blank" rel="noopener noreferrer">C#</a>, 
+        <a href="https://dotnet.microsoft.com/" target="_blank" rel="noopener noreferrer">.NET</a>, 
+        <a href="https://azure.microsoft.com/" target="_blank" rel="noopener noreferrer">Azure</a>, 
+        <a href="https://angular.io" target="_blank" rel="noopener noreferrer">Angular</a>, 
+        <a href="https://typescriptlang.org" target="_blank" rel="noopener noreferrer">TypeScript</a>, 
+        <a href="https://dotnet.microsoft.com/en-us/apps/aspnet/web-apps/blazor" target="_blank" rel="noopener noreferrer">Blazor</a>, 
+        <a href="https://www.microsoft.com/en-us/sql-server/" target="_blank" rel="noopener noreferrer">SQL Server</a>, and 
+        <a href="https://astro.build" target="_blank" rel="noopener noreferrer">Astro</a>.
+      </p>
+      
+      <h2>Get In Touch</h2>
+      
+      <p>
+        Find me on <a href="https://github.com/wesleydeland">GitHub</a>, 
+        <a href="https://linkedin.com/in/jamesdeland">LinkedIn</a>, or 
+        send me an email at <a href="mailto:mail@wesleydeland.com">mail@wesleydeland.com</a>.
+      </p>
+
+      <p>
+        Check out the <a href="/blog/journal">Journal</a> to see what I've been writing about.
+      </p>
+    </div>
+  </div>
+</BaseLayout>
