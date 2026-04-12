@@ -25,3 +25,28 @@
 .btn-secondary {
   @apply bg-white text-black border border-gray-200 px-8 py-3 rounded-full transition-all duration-300 hover:bg-gray-100 font-medium;
 }
+
+/* Improve dark-mode typography contrast for prose content */
+.dark .prose {
+  --tw-prose-body: #F8FAFC; /* lighter near-white */
+  --tw-prose-headings: #FFFFFF;
+  --tw-prose-lead: #E6EEF8;
+  --tw-prose-links: #FFFFFF;
+  --tw-prose-bold: #FFFFFF;
+  --tw-prose-counters: #CBD5E1;
+  --tw-prose-bullets: #94A3B8;
+  --tw-prose-hr: #1F2937;
+  --tw-prose-quote-borders: #374151;
+  --tw-prose-captions: #94A3B8;
+}
+
+/* Make code blocks and other elements more visible in dark mode */
+.dark .prose code,
+.dark .prose pre {
+  color: #f8fafc;
+}
+
+/* Ensure featured image overlays (if any) don't dim text */
+.dark .feature-image img {
+  opacity: 1;
+}
