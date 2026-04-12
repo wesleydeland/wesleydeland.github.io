@@ -9,7 +9,8 @@
     "build": "astro build --outDir blog",
     "postbuild": "node ./scripts/fix-images.js",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "build:site": "npm run build && rm -rf _site && mkdir -p _site && cp -R site-root/. _site/ && rm -rf _site/blog && cp -R blog _site/blog"
   },
   "dependencies": {
     "@astrojs/rss": "^4.0.18",
