@@ -1,12 +1,6 @@
 # Use a compact, production-friendly Node image
 FROM node:20-alpine
 
-# Set non-root user for security
-RUN addgroup -g 1001 -S nodejs \
-  && adduser -S node -u 1001 \
-  && chown -R node:nodejs /app
-USER node
-
 # Create the app directory
 WORKDIR /app
 
@@ -16,11 +10,13 @@ COPY package.json .
 # Install dependencies
 RUN npm ci --only=production --cache /home/node/.npm --prefer-offline
 
-# Copy the rest of the application
+# Build the app as root, then switch to non-root
 COPY . .
-
-# Build the site (creates `_site`)
 RUN npm run build:site
+
+# node:20-alpine already has a `node` user and group
+RUN chown -R node:node /app
+USER node
 
 # Expose the port Dokploy will route to
 EXPOSE 3000
