@@ -1,6 +1,5 @@
 ---
 import '../styles/global.css';
-import { ClientRouter } from 'astro:transitions';
 import DarkModeToggle from '../components/ui/DarkModeToggle.astro';
 
 interface Props {
@@ -71,10 +70,10 @@ const jsonLD = type === 'article' && jsonLDArticle ? jsonLDArticle : jsonLDWebsi
     <meta name="description" content={description} />
     <link rel="canonical" href={canonicalURL} />
 
-    <!-- Aktivieren der View Transitions -->
-    <ClientRouter />
+    <!-- View Transitions enabled in Astro 5+ -->
+    <!-- <ClientRouter /> -->
 
-    <!-- Dark mode initialization script according to official Tailwind documentation -->
+    <!-- Dark mode initialization script -->
     <script is:inline>
       // Function to apply theme
       function applyTheme() {
@@ -131,8 +130,8 @@ const jsonLD = type === 'article' && jsonLDArticle ? jsonLDArticle : jsonLDWebsi
           <div class="hidden md:flex items-center gap-6">
             <nav class="flex items-center gap-6">
               <a href="/" class="nav-link">Home</a>
-              <a href="/journal" class="nav-link">Journal</a>
-              <a href="/about" class="nav-link">About</a>
+              <a href="/blog/journal" class="nav-link">Journal</a>
+              <a href="/blog/about" class="nav-link">About</a>
             </nav>
             <DarkModeToggle />
           </div>
@@ -160,8 +159,8 @@ const jsonLD = type === 'article' && jsonLDArticle ? jsonLDArticle : jsonLDWebsi
         <!-- Mobile Navigation -->
         <nav id="mobile-menu" class="hidden md:hidden mt-6 pt-4 border-t border-gray-200 dark:border-gray-800 space-y-1">
           <a href="/" class="block px-3 py-2 text-sm text-gray-900 dark:text-gray-300 hover:underline">Home</a>
-          <a href="/journal" class="block px-3 py-2 text-sm text-gray-900 dark:text-gray-300 hover:underline">Journal</a>
-          <a href="/about" class="block px-3 py-2 text-sm text-gray-900 dark:text-gray-300 hover:underline">About</a>
+          <a href="/blog/journal" class="block px-3 py-2 text-sm text-gray-900 dark:text-gray-300 hover:underline">Journal</a>
+          <a href="/blog/about" class="block px-3 py-2 text-sm text-gray-900 dark:text-gray-300 hover:underline">About</a>
           </nav>
       </header>
       
@@ -176,8 +175,8 @@ const jsonLD = type === 'article' && jsonLDArticle ? jsonLDArticle : jsonLDWebsi
             </div>
             <nav class="flex items-center gap-4">
               <a href="/" class="nav-link-footer">Home</a>
-              <a href="/journal" class="nav-link-footer">Journal</a>
-              <a href="/about" class="nav-link-footer">About</a>
+              <a href="/blog/journal" class="nav-link-footer">Journal</a>
+              <a href="/blog/about" class="nav-link-footer">About</a>
             </nav>
           </div>
       </footer>
