@@ -11,14 +11,14 @@ export async function getStaticPaths() {
   return sortedPosts.map((entry, index) => {
     const prevPost = sortedPosts[index - 1]
       ? {
-          url: `/posts/${sortedPosts[index - 1].id}`,
+          url: `/blog/posts/${sortedPosts[index - 1].id}`,
           title: sortedPosts[index - 1].data.title
         }
       : null;
 
     const nextPost = sortedPosts[index + 1]
       ? {
-          url: `/posts/${sortedPosts[index + 1].id}`,
+          url: `/blog/posts/${sortedPosts[index + 1].id}`,
           title: sortedPosts[index + 1].data.title
         }
       : null;
