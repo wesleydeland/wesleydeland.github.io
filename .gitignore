@@ -485,3 +485,5 @@ $RECYCLE.BIN/
 
 dist/
 _site/
+blog/
+.astro/
